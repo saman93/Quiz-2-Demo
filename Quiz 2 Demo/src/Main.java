@@ -7,9 +7,9 @@ public class Main {
 		boolean bu, bp;
 		Scanner keyboard = new Scanner(System.in);
 		System.out.print("Username: ");
-		bu= authentication(true, keyboard.next());
+		bu= authentication(keyboard.next(), "Saman");
 		System.out.print("Password: ");
-		bp= authentication(false, keyboard.next());
+		bp= authentication(keyboard.next(), "1234");
 		if(bu && bp)
 			System.out.println("Welcome Saman");
 		else
@@ -20,16 +20,8 @@ public class Main {
 	
 	
 	
-	public static boolean authentication(boolean b, String up){
-		
-		String cus = "Saman";
-		String cp = "1234";
-		String s;
-		if(b)
-			s=cus;
-		else
-			s=cp;
-		
+	public static boolean authentication(String up, String s){
+			
 		if(up.equalsIgnoreCase(s))
 			return true;
 		else
